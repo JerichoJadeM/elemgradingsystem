@@ -1,0 +1,81 @@
+
+    * {box-sizing: border-box}
+
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background:tomato;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: tomato;
+    outline: none;
+    }
+    input.LRN[type=text]{
+        width: 55%;
+        padding: 14px 20px;
+        margin: 8px 8px 5px 0;
+        border: none;
+        background-color: rgb(136, 211, 255);
+        float: left;
+    }
+    
+    hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+    }
+    
+    button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    }
+    
+    button:hover {
+    opacity:1;
+    }
+    .searchbtn{
+        background-color: dodgerblue;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+        opacity: 0.9;
+        float: left;
+
+    }
+    .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    }
+
+    .cancelbtn, .signupbtn{
+    float: left;
+    width: 50%;
+    }
+    .container {
+    padding: 16px;
+    }
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    
+    @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+    width: 100%;
+    }
+    }
+    

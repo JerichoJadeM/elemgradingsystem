@@ -1,0 +1,154 @@
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:before, *:after{
+    content: '';
+    display: block;
+    position: absolute;
+}
+html, body{
+    font: 15px/1 'Open Sans', sans-serif;
+    color: #777;
+}
+a{
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+.wrapper{
+    display: flex;
+    min-height: 100%;
+}
+nav{
+    width: 200px;
+    background-color: rgb(0, 52, 104);
+}
+/*#404040*/
+nav header{
+    position: relative;
+    height: 80px;
+    padding: 20px 0 0 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color:  rgb(0, 32, 65);/*#333333*/
+}
+
+nav header span{
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+    border: 1px solid #fff;
+}
+
+nav header span:before{
+    content: '\f0ae';
+    font: normal 20px fontawesome;
+    top: 7px;
+    left: 9px;
+}
+nav header a:before{
+    content: '\f08b';
+    font: normal 20px fontawesome;
+    top: 28px;
+    right: 15px;
+}
+nav ul span{
+    display: block;
+    padding: 15px;
+    color: rgba(255, 255, 255, .5);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(19, 112, 204);/*#333333*/
+}
+nav ul a{
+    position: relative;
+    display: block;
+    padding: 15px 15px 17px 50px;
+    color: #fff;
+    border-bottom: 1px solid rgb(19, 112, 204);/*#333333*/
+    text-decoration: none;
+}
+nav ul a:hover{
+    background-color: dodgerblue;/*#333333*/
+}
+nav ul a.active{
+    background-color: rgb(120, 157, 194);
+}
+nav ul a:before{
+    font: normal 16px fontawesome;
+    top: 15px;
+    left: 18px;
+}
+nav ul li:nth-child(2) a:before {content: '\f022';}
+nav ul li:nth-child(3) a:before {content: '\f14d';}
+nav ul li:nth-child(4) a:before {content: '\f007';}
+nav ul li:nth-child(6) a:before {content: '\f082';}
+nav ul li:nth-child(7) a:before {content: '\f12e';}
+nav ul li:nth-child(8) a:before {content: '\f08b';}
+
+main{
+    height: 100vh;
+    flex: 1;
+    padding: 25px;
+    background-color: #f5f5f5;
+}
+main h1{
+    height: 80px;
+    margin: -25px -25px 25px -25px;
+    padding: 0 25px;
+    line-height: 76px;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: rgb(203, 225, 247);/*#ddd*/
+}
+.contents{
+    display: flex;
+    height: auto;
+}
+.contents > div{
+    flex: 1;
+    margin: 0 20px 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.contents > div:last-child{
+    margin-right: 0;
+}
+.contents h2{
+    margin: -15px -15px 15px -15px;
+    padding: 12px 15px;
+    font-size:14px;
+    font-weight: 400;
+    border-bottom: 1px solid #ddd;
+}
+.contents li{
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0 0 0 25px;
+}
+.contents li:before{
+    content: '\f001';
+    font: normal 16px fontawesome;
+    top:0;
+    left: 0;
+    color: #999;
+}
+
+
+@media(max-width: 1000px){
+    .contents{
+        flex-direction: column;
+    }
+    .contents > div{
+        margin-right:0;
+    }
+}
+
