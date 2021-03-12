@@ -94,9 +94,9 @@
 
             $sql = "SELECT Username, LRN_Number,students.StudentID, students.FirstName, students.MidInitial, students.LastName, students.GradeLevel, students.Section, Average, Quarter 
             from grades INNER JOIN students on grades.StudentID = students.StudentID 
-            INNER JOIN teachers on grades.TeacherID = teachers.TeacherID WHERE Username = '$name' GROUP BY LRN_Number;";
+            INNER JOIN teachers on grades.TeacherID = teachers.TeacherID WHERE Username = '$name';";
             $result = mysqli_query($conn, $sql);
-
+            
             $count = 1;
             while($row = mysqli_fetch_assoc($result)){
                 $id = $row['StudentID'];
