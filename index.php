@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require 'includes/config.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -35,7 +36,6 @@
             <h3>Teacher Portal</h3>
             <?php
                 if(isset($_POST['login'])){
-                    require 'includes/config.php';
                     
                     $Username = $_POST['username'];
                     $Password = $_POST['password'];
@@ -63,6 +63,30 @@
                         <input type = "password" name = "password" placeholder = "Enter Password" required /><br>
                         <button class = "btn-login" type = "submit" name = "login">Teacher Login</button>
                     </form>
+                     <?php
+                          if(isset($_POST['demoSubmit'])){
+                            $userDemo = $_POST['userDemo'];
+                            $passDemo = $_POST['passDemo'];
+
+                            $sql = "SELECT TeacherID FROM teachers WHERE Username='$userDemo' AND Password='$passDemo';";
+                            $result = $conn->query($sql);
+
+                            $row = $result->fetch_assoc();
+                            $count = $result->num_rows;
+
+                            if($count == 1){
+                              $_SESSION['alogin'] = $_POST['userDemo'];
+                                  header('location: admin/index.php');
+                            }
+                          } 
+                        ?>
+
+                        <form method="POST">
+                            <!--INPUTS FOR DEMO-->
+                            <input type="hidden" name="userDemo" value="gemma">
+                            <input type="hidden" name="passDemo" value="test1">
+                            <button name="demoSubmit" class="btn btn-dark btn-outline-success btn-block shadow mb-4"><strong>Demo</strong></button>
+                        </form>
                 </div>
                 
                 <button class = "btn-pop-up" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
@@ -124,7 +148,7 @@
              &copy; Copyright
                 <script>
                 document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                </script>, CC106: Jericho Jade B. Madolid || BSIT 4A IICSNIPSC. All rights reserved.
+                </script>, CC106: Jericho Jade B. Madolid || All rights reserved.
             </div>
         </footer>
     </main>
