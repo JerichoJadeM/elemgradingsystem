@@ -148,7 +148,7 @@
              &copy; Copyright
                 <script>
                 document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                </script>, CC106: Jericho Jade B. Madolid || All rights reserved.
+                </script>Jericho Jade B. Madolid || All rights reserved.
             </div>
         </footer>
     </main>
